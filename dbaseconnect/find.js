@@ -7,9 +7,9 @@ MongoClient.connect(url, function(err, db){
     //var myobj = { name: 'raj'};
     // find(), findOne()
     //limit(5)
-    dbo.collection("customer").find().limit(2).toArray(function(err, res){
+    dbo.collection("customer").find().toArray(function(err, res){
         if(err)throw err;
-        console.log(JSON.stringify(res));
+        console.log(res);
         db.close();
     })
 })
